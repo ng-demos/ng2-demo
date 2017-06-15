@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FallbackComponent } from './fallback/fallback.component';
 import { CoreModule } from './core/core.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HybridUrlHandlingStrategy } from './core/hash-location-strategy';
+import { UrlHandlingStrategy } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: UrlHandlingStrategy, useClass: HybridUrlHandlingStrategy},
   ],
   bootstrap: [AppComponent],
 })
