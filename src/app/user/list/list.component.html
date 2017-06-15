@@ -1,9 +1,9 @@
 <ul class="nav nav-pills">
   <li class="mr-1">
-    <button type="button" class="btn btn-secondary" (click)="addItem()">Add</button>
+    <button type="button" class="btn btn-primary" (click)="addItem()">Add</button>
   </li>
   <li *ngFor="let i of items" class="nav-item">
-    <a [routerLink]="['/ng2', i]" routerLinkActive="active" class="nav-link">{{i}}</a>
+    <a [routerLink]="['/new', i]" routerLinkActive="active" class="nav-link">{{i}}</a>
   </li>
 </ul>
 <hr>
