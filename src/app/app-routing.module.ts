@@ -4,8 +4,12 @@ import { FallbackComponent } from './fallback/fallback.component';
 
 const routes: Routes = [
   {
-    path: 'new',
+    path: 'user',
     loadChildren: './user/user.module#UserModule',
+  },
+  {
+    path: 'account',
+    loadChildren: './account/account.module#AccountModule',
   },
   {
     path: '**',

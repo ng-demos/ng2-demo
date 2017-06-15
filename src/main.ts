@@ -3,13 +3,17 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { UpgradeModule } from '@angular/upgrade/static';
 
 if (environment.production) {
   enableProdMode();
 }
 
 function main(): void {
-  platformBrowserDynamic().bootstrapModule(AppModule);
+  platformBrowserDynamic().bootstrapModule(AppModule).then((platform) => {
+    const upgrade = platform.injector.get(UpgradeModule) as UpgradeModule;
+    upgrade.bootstrap(document.body, ['ng1DemoApp'], {strictDi: true});
+  });
 }
 
 window['ng2'] = main;

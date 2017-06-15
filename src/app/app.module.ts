@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HybridUrlHandlingStrategy } from './core/hash-location-strategy';
 import { UrlHandlingStrategy } from '@angular/router';
+import { UpgradeModule } from '@angular/upgrade/static';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UrlHandlingStrategy } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    UpgradeModule,
     CoreModule,
   ],
   providers: [
