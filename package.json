@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --extract-css --proxy-config=./proxy.conf.js -p 0",
-    "build": "ng build --extract-css -prod --deploy-url=ng2/",
+    "build": "ng build --extract-css -prod --deploy-url=ng2/ && rm -fr ../ng1-demo/app/ng2 && cp -r dist ../ng1-demo/app/ng2",
     "test": "ng test",
     "lint": "ng lint \"src/**/*.ts\"",
     "ci": "npm run lint && ng test --single-run",
