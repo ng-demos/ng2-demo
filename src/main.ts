@@ -8,4 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+function main(): void {
+  platformBrowserDynamic().bootstrapModule(AppModule);
+}
+
+window['ng2'] = main;
+main();
