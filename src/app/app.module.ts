@@ -3,19 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FallbackComponent } from './fallback/fallback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FallbackComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [
-    // {provide: LocationStrategy, useClass: HashLocationStrategy},
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
